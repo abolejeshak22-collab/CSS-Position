@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Image Positioning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 2500px; 
+}
+
+
+img {
+  width: 180px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.sticky-wrapper {
+  position: sticky;
+  top: 10px;               
+  display: flex;
+  justify-content: center; 
+  z-index: 100;
+  width: 100%;
+}
+
+.img-sticky-center {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.relative-container {
+  position: relative;   
+  width: 100%;
+  min-height: 250px;      
+  margin-top: 30px;
+}
+
+
+.img-absolute-left {
+  position: absolute;
+  top: 0;
+  left: 20px;             
+}
+
+
+.img-absolute-right {
+  position: absolute;
+  top: 0;
+  right: 20px;            
+}
+.bottom-content {
+  margin-top: 40px;
+  padding: 0 20px;
+   display: flex;
+  justify-content: center; 
+  z-index: 100;
+  
+  
+}
+</style>
+<body>
+
+    
+<div class="sticky-wrapper">
+    <img src="OIP.jpeg" alt="Birds" class="img-sticky-center" />
+</div>
+
+
+<div class="relative-container">
+    <img src="OIP (1).jpeg" alt="Person" class="img-absolute-left" />
+
+    <img src="OIP (1).jpeg" alt="Ocean" class="img-absolute-right" />
+</div>
+
+<div class="bottom-content">
+    <img src="OIP (1).jpeg" alt="Night Sky" class="img-bottom" />
+</div>
+
+</body>
+
+</html>
